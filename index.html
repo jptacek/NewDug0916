@@ -22,28 +22,43 @@
                 : 'css/print/paper.css';
             document.getElementsByTagName('head')[0].appendChild(link);
         </script>
+				<style>
+					h1.darkview {
+					    /* your styles for the class version-one */
+					    color: black;
+					}
+					h3.darkview {
+					    /* your styles for the class version-one */
+					    color: black;
+					}
+					html.dim .backgrounds {
+					   -webkit-filter:  saturate(9) brightness(.4);
+					   -moz-filter: saturate(.9) brightness(.49);
+					   -o-filter:  saturate(.9) brightness(.4);
+					   -ms-filter: saturate(.9) brightness(.4);
+					   filter:  saturate(.9) brightness(.4);
+					}
+
+				</style>
+				<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
-                <section>
-                    <h1>Angular vs React</h1>
-                    <h3>NEWDUG September 14, 2016</h3>
-                    <p>
-                        <small>
-                            <a href="https://jptacek.com">John Ptacek</a>
-                            /
-                            <a href="https://twitter.com/jptacek">@jptacek</a>
-                        </small>
-                    </p>
-                    <p>
-                        <small>
-                            <a href="https://www.SkylineTechnologies.com">Skyline Technologies</a>
-                            /
-                            <a href="https://twitter.com/SkylineTweets">@SkylineTweets</a>
-                        </small>
-                    </p>
+                <section data-background="/images/AngularVsReact.png" data-state="dim">
+                    <h1 >Angular vs React</h1>
+                    <h3 >NEWDUG September 14, 2016</h3>
+
                 </section>
+
+								<section>
+									<h2>John Ptacek</h2>
+									<p><i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://jptacek.com">JPtacek.com</a></p>
+									<p><i class="fa fa-twitter fa-sm"></i>&nbsp;<a href="https://twitter.com/jptacek">@jptacek</a></p>
+									<p><i class="fa fa-github fa-sm"></i>&nbsp;<a href="https://github.com/jptacek">JPtacek</a></p>
+									<p><i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://www.SkylineTechnologies.com">Skyline Technologies</a></p>
+									<p><i class="fa fa-twitter fa-sm"></i>&nbsp;<a href="https://twitter.com/SkylineTweets">@SkylineTweets</a></p>
+								</section>
                 <section>
                     <h2>Agenda</h2>
                     <p>History</p>
@@ -170,61 +185,62 @@
                 <section>
                     <h2>Project Setup</h2>
                     <h4>Good News!</h4>
-										<p>
-											<b>Angular Command Line</b> -
-												<a href=" https://github.com/angular/angular-cli">https://github.com/angular/angular-cli</a>
-											</p>
-											<p>
-												<pre>
+                    <p>
+                        <b>Angular Command Line</b>
+                        -
+                        <a href=" https://github.com/angular/angular-cli">https://github.com/angular/angular-cli</a>
+                    </p>
+                    <p>
+                        <pre>
 													<code class="hljs" data-trim contenteditable>ng new FOO</code>
 												</pre>
-											</p>
-											<p>
-												<b>React Command Line</b>
-												<a href="https://github.com/facebookincubator/create-react-app">
-												https://github.com/facebookincubator/create-react-app</a>
-											</p>
-												<p>
-													<pre>
+                    </p>
+                    <p>
+                        <b>React Command Line</b>
+                        <a href="https://github.com/facebookincubator/create-react-app">
+                            https://github.com/facebookincubator/create-react-app</a>
+                    </p>
+                    <p>
+                        <pre>
 														<code class="hljs" data-trim contenteditable>create-react-app FOO</code>
 													</pre>
-												</p>
-											</p>
-									</section>
-                        <!-- Slide on React -->
-                        <section>
-                            <h2>Why Upgrade</h2>
-                            <p class="fragment">Mobile First</p>
-                            <p class="fragment">Standards focused​</p>
-                            <p class="fragment">Performance (Virtual DOM!)</p>
-                            <p class="fragment">Web Components</p>
-                        </section>
+                    </p>
+                </p>
+            </section>
+            <!-- Slide on React -->
+            <section>
+                <h2>Why Upgrade</h2>
+                <p class="fragment">Mobile First</p>
+                <p class="fragment">Standards focused​</p>
+                <p class="fragment">Performance (Virtual DOM!)</p>
+                <p class="fragment">Web Components</p>
+            </section>
 
-								<!-- Slide on Comparing -->
-                <section >
-                    <h2>Not the Same</h2>
-                    <h4>Angular is a framework. React is a library</h4>
-                    <img src="./images/apple-orange.jpg" alt="Apples are not oranges"/>
-                </section>
+            <!-- Slide on Comparing -->
+            <section >
+                <h2>Not the Same</h2>
+                <h4>Angular is a framework. React is a library</h4>
+                <img src="./images/apple-orange.jpg" alt="Apples are not oranges"/>
+            </section>
 
-								<!-- Code -->
-                <section >
-                    <h2>Periodic Table App</h2>
-										<p>Angular Version</p>
-                    <p>React Version</p>
-                </section>
+            <!-- Code -->
+            <section >
+                <h2>Periodic Table App</h2>
+                <p>Angular Version</p>
+                <p>React Version</p>
+            </section>
 
-								<!-- Code -->
-                <section >
-                    <h2>Components</h2>
-										<p>React and Angular based on components</p>
-                    <p>Angular Gateway to HTML components</p>
-                </section>
+            <!-- Code -->
+            <section >
+                <h2>Components</h2>
+                <p>React and Angular based on components</p>
+                <p>Angular Gateway to HTML components</p>
+            </section>
 
-								<!-- Code -->
-                <section >
-                    <h2>Angular Component</h2>
-										<pre><code class="hljs" data-trim contenteditable>
+            <!-- Code -->
+            <section >
+                <h2>Angular Component</h2>
+                <pre><code class="hljs" data-trim contenteditable>
 		import { Component } from 'angular2/core';​
 		@Component({​
 		    selector: 'foo-Div',​
@@ -236,12 +252,19 @@
 		    public message = 'Foo!';​
 		}
 										</code></pre>
-								</section>
+            </section>
 
-								<!-- Code for React Component -->
-                <section >
-                    <h2>React Component</h2>
-										<pre><code class="hljs" data-trim contenteditable>
+            <!-- Components -->
+            <section >
+                <h2>Components</h2>
+                <p>React and Angular based on components​</p>
+                <p>Angular Gateway to HTML components</p>
+            </section>
+
+            <!-- Code for React Component -->
+            <section >
+                <h2>React Component</h2>
+                <pre><code class="hljs" data-trim contenteditable>
 import React from 'react';​
 export default class Foo extends React.Component {​
 	constructor(props) {​
@@ -257,41 +280,167 @@ export default class Foo extends React.Component {​
 		}
 	}​
 									</code></pre>
+            </section>
 
+            <section >
+                <h2>​​​​Templates and Databinding</h2>
+                <p>Templates and Databinding</p>
+                <p>React HTML is in render method</p>
+                <p>JSX allows for HTML like</p>
+                <p>Angular has one way and two way data binding​</p>
+                <ul>
+                    <li>
+                        <pre><code class="hljs" data-trim contenteditable>{{element.name}}</pre>
+                    </code>
+                </li>
+                <li>
+                    <pre><code class="hljs" data-trim contenteditable><input type="text" [(ngModel)]="inputFieldName" id="id1" /></pre>
+                </code>
+            </li>
+        </ul>
+        <p>React is stateless, no two way binding</p>
+        <ul>
+            <li>
+                <pre><code class="hljs" data-trim contenteditable>This.state.inputFieldName</pre>
+            </code>
+        </li>
+    </ul>
+</section>
 
+<section>
+    <h2>Why Angular</h2>
+    <p>AngularJS populartiy​</p>
+    <p>Framework means less JavaScript fatigue​</p>
+    <p>TypeScript​</p>
+    <p>Less Churn​</p>
+    <p>Web Component​</p>
+    <p>You like JavaScript in your HTML</p>
+</section>
 
+<section>
+    <h2>Why React</h2>
+    <p>JSX​</p>
+    <p>Fails Better​</p>
+    <p>You LOVE JavaScrtip</p>
+    <p>You like HTML in your JavaScript​​</p>
+</section>
 
+<section>
+    <h2>Feelings</h2>
+    <section>
+        <p>Angular is a framework = bigger</p>
+        <ul>
+            <li>React allows you to choose​
+            <li>566K vs 139K for React+Redux​
+        </ul>
+    </section>
 
-					</div>
-			</div>
+    <section>
+        <p>React is a library, best of breed</p>
+        <ul>
+            <li>Sweet Christmas JavaScript churn is killing me​
+        </ul>
+    </section>
 
+    <section>
+        <p>Angular has forced consistency​</p>
+    </section>
 
-                <script src="lib/js/head.min.js"></script>
-                <script src="js/reveal.js"></script>
+    <section>
+        <p>Angular2 is a path to web components​​</p>
+    </section>
 
-                <script>
-                    // More info https://github.com/hakimel/reveal.js#configuration
-                    Reveal.initialize({
-                        history: true,
+    <section>
+        <p>React/JSX allows you to fail early</p>
+    </section>
 
-                        // More info https://github.com/hakimel/reveal.js#dependencies
-                        dependencies: [
-                            {
-                                src: 'plugin/markdown/marked.js'
-                            }, {
-                                src: 'plugin/markdown/markdown.js'
-                            }, {
-                                src: 'plugin/notes/notes.js',
-                                async: true
-                            }, {
-                                src: 'plugin/highlight/highlight.js',
-                                async: true,
-                                callback: function() {
-                                    hljs.initHighlightingOnLoad();
-                                }
-                            }
-                        ]
-                    });
-                </script>
-            </body>
-        </html>
+    <section>
+        <p>React is JavaScript​</p>
+    </section>
+
+    <section>
+        <p>Angular is more HTML, but not HTML​​</p>
+				<p>Angular</p>
+        <pre><code class="hljs" data-trim contenteditable>(click) = "onSelect(myOject)"</pre></code><br/>
+				<p>React</p>
+        <pre><code class="hljs" data-trim contenteditable>onClick ={ this.onSelect.bind(this,myObject)}​</pre></code><br/>
+
+		</section>
+		<section>
+		<p>What is Google Doing!?!!?</p>
+		<ul>
+		    <li>Polymer
+		    <li>Web Components
+		</ul>
+		<p>DoubleClick uses Angular</p>
+		<p>YouTube Gaming, Google Patents (and SalesForce) uses Polymer</p>
+		</section>
+
+		<section>
+		<p>JSX can trail in tooling on Microsoft stack</p>
+		</section>
+
+		<section>
+		<p>Typescript, blessing or curse</p>
+		</section>
+
+		<section>
+		<p>Mobile performance with Angular file size​</p>
+		<ul>
+		    <li>React mix and match approach
+		</ul>
+		</section>
+
+		<section>
+		<p>To learn React, learn JavaScript; to learn Angular, learn Angular​</p>
+		<ul>
+		    <li>Angular starts quick, can get finicky soon after​
+		</ul>
+		</section>
+
+		</section>
+
+		<section>
+			<h2>Recommendations</h2>
+			<p class="fragment">Wait/Do Nothing</p>
+			<p class="fragment">Angular for Enterprises</p>
+			<p class="fragment">Reactfor JavaScript strong organizations/devs</p>
+
+		</section>
+
+		<section>
+			<h2>Questions?</h2>
+		</section>
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    history: true,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+        {
+            src: 'plugin/markdown/marked.js'
+        }, {
+            src: 'plugin/markdown/markdown.js'
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }
+    ]
+});
+</script>
+</body>
+</html>
