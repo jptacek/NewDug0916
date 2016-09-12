@@ -1,173 +1,297 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Angular vs React</h1>
-					<h3>NEWDUG September 14, 2016</h3>
-					<p>
-						<small><a href="https://jptacek.com">John Ptacek</a> / <a href="https://twitter.com/jptacek">@jptacek</a></small>
-					</p>
-					<p>
-						<small><a href="https://www.SkylineTechnologies.com">Skyline Technologies</a> /
-							<a href="https://twitter.com/SkylineTweets">@SkylineTweets</a></small>
-					</p>
-				</section>
-				<section>
-						  <h2>Agenda</h2>
-							<p>History</p>
-							<p>High Level Compare</p>
-							<p>Getting Started</p>
-							<p>Angular Things</p>
-							<p>React Things</p>
-							<p>Feelings</p>
-				</section>
-				<!-- Slide 3-->
-				<section>
-					<h2>Start of a Conversation</h2>
-				</section>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi)
+                ? 'css/print/pdf.css'
+                : 'css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Angular vs React</h1>
+                    <h3>NEWDUG September 14, 2016</h3>
+                    <p>
+                        <small>
+                            <a href="https://jptacek.com">John Ptacek</a>
+                            /
+                            <a href="https://twitter.com/jptacek">@jptacek</a>
+                        </small>
+                    </p>
+                    <p>
+                        <small>
+                            <a href="https://www.SkylineTechnologies.com">Skyline Technologies</a>
+                            /
+                            <a href="https://twitter.com/SkylineTweets">@SkylineTweets</a>
+                        </small>
+                    </p>
+                </section>
+                <section>
+                    <h2>Agenda</h2>
+                    <p>History</p>
+                    <p>High Level Compare</p>
+                    <p>Getting Started</p>
+                    <p>Angular Things</p>
+                    <p>React Things</p>
+                    <p>Feelings</p>
+                </section>
+                <!-- Slide 3-->
+                <section>
+                    <h2>Start of a Conversation</h2>
+                </section>
 
-				<!-- Slide 4-->
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>History</h2>
-						<p>A quick history of JavaScript from my non-historian eyes</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>1995</h2>
-						<p>JavaScript lauched</p>
-						<p>Created by at Netscape</p>
-						<p>Originally called LiveWire</p>
-					</section>
-					<section>
-						<h2>June 1997</h2>
-						<p>ECMAScript standard created</p>
-					</section>
-					<section>
-						<h2>2005</h2>
-						<p>Microsoft introduced in late 90s with XMLHttpRequest </p>
-						<p>Google adopts for Gmail and Maps in 2004/2005</p>
-						<p>Jesse James Garret coins Ajaxin paper [Ajax: A New Approach to Web Applications](http://adaptivepath.org/ideas/ajax-new-approach-web-applications/)</p>
-					</section>
-					<section data-markdown>
-						## 2005/2006 ##
-						The Libraries and Frameworks are coming...
+                <!-- Slide on Javascript History-->
+                <section>
+                    <section>
+                        <h2>History</h2>
+                        <p>A quick history of JavaScript from my non-historian eyes</p>
+                        <br>
+                        <a href="#" class="navigate-down">
+                            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+                        </a>
+                    </section>
+                    <section>
+                        <h2>1995</h2>
+                        <p>JavaScript lauched</p>
+                        <p>Created by at Netscape</p>
+                        <p>Originally called LiveWire</p>
+                    </section>
+                    <section>
+                        <h2>June 1997</h2>
+                        <p>ECMAScript standard created</p>
+                    </section>
+                    <section>
+                        <h2>2005</h2>
+                        <p>Microsoft introduced in late 90s with XMLHttpRequest
+                        </p>
+                        <p>Google adopts for Gmail and Maps in 2004/2005</p>
+                        <p>Jesse James Garret coins Ajaxin paper [Ajax: A New Approach to Web Applications](http://adaptivepath.org/ideas/ajax-new-approach-web-applications/)</p>
+                    </section>
+                    <section data-markdown>
+                        ## 2005/2006 ## The Libraries and Frameworks are coming... [Dojo](http://dojotoolkit.org/) - Cross platform widgets [ProtoType](http://prototypejs.org/) - Emerged as Rails tool for HTTP [jQuery](https://jquery.com/) - The One That Changed Everything
+                    </section>
+                    <section data-markdown>
+                        ## June 2009 ## ECMAScript 5 approved Introduced JSON support JSON is its own standard
+                    </section>
+                    <section data-markdown>
+                        ## 2010 ## Initial Release of AngularJS 1.0 release by Miško Hevery and Adam Abrons at Brat Tech LLC Released as Open Source Hevery moved to Google, still develops and maintains
+                    </section>
+                    <section data-markdown>
+                        ## 2011 ## Created by Jordan Walke. First deployed to drive FaceBooks's News feed
+                    </section>
+                    <section data-markdown>
+                        ## May 2013 ## React [Open Sourced](https://github.com/facebook/react) at React Conf.
 
-						[Dojo](http://dojotoolkit.org/) - Cross platform widgets
+                    </section>
+                    <section >
+                        <h2>Sept 2014</h2>
+                        <p>AngularJS 2.0
+                            <a href="https://github.com/facebook/react">announced</a>
+                            at NG-Europe</p>
+                        <img height="400px" src="./images/angularTombstone.jpg" alt="AngularJS Tombstone">
+                        <p>Begin the freak out</p>
+                    </section>
+                    <section >
+                        <h2>June 2015</h2>
+                        <p>ECMAScript 2015 (ES6) is launched</p>
+                        <p>(ECMAScript 2016 (ES7) just came out this June)</p>
 
-						[ProtoType](http://prototypejs.org/) - Emerged as Rails tool for HTTP
+                    </section>
 
-						[jQuery](https://jquery.com/) - The One That Changed Everything
-					</section>
-					<section data-markdown>
-						## June 2009 ##
-						ECMAScript 5 approved
+                    <section>
+                        <h2>Why History?</h2>
+                        <p>Things are changing MUCH quicker than before!</p>
+                        <br>
+                        <a href="#/3">
+                            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+                        </a>
+                    </section>
+                </section>
 
-						Introduced JSON support
+                <!-- Slide on AngularJS -->
+                <section>
+                    <h2>AngularJS Level Set</h2>
+                    <p class="fragment">From the fine folks at Google​</p>
+                    <p class="fragment">AngularJS 1.x – Google JavaScript library for development​</p>
+                    <p class="fragment">AngularJS 2.x – Called Angular​</p>
+                    <p class="fragment">Angular is a Framework​</p>
+                    <p class="fragment">Angular is opinionated​</p>
+                    <p class="fragment">Angular has code in your markup​</p>
+                    <p class="fragment">Angular is HTML centric</p>
+                </section>
 
-						JSON is its own standard
-					</section>
-					<section data-markdown>
-						## 2010 ##
-						Initial Release of AngularJS
+                <!-- Slide on React -->
+                <section>
+                    <h2>React Level Set</h2>
+                    <p class="fragment">From the fine folks at Facebook</p>
+                    <p class="fragment">React is a Library (View)​</p>
+                    <p class="fragment">React is not opinionated​</p>
+                    <p class="fragment">React has markup in your code​</p>
+                    <p class="fragment">React is JavaScript centric</p>
+                </section>
 
-						1.0 release by Miško Hevery and Adam Abrons at Brat Tech LLC
+                <!-- Slide on Comparing -->
+                <section >
+                    <h2>Not the Same</h2>
+                    <h4>Angular is a framework. React is a library</h4>
+                    <img src="./images/apple-orange.jpg" alt="Apples are not oranges"/>
+                </section>
 
-						Released as Open Source
+                <section>
+                    <h2>Project Setup</h2>
+                    <h4>The New JavaScript</h4>
+                    <p>
+                        <a href="https://angular.io/docs/ts/latest/quickstart.html">Angular "QuickStart"</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Setting-Up-A-React-ES6-Webpack-Project">React "QuickStart"</a>
+                    </p>
+                </section>
 
-						Hevery moved to Google, still develops and maintains
-					</section>
-					<section data-markdown>
-						## 2011 ##
-						Created by Jordan Walke.
+                <!-- New Project setup -->
+                <section>
+                    <h2>Project Setup</h2>
+                    <h4>Good News!</h4>
+										<p>
+											<b>Angular Command Line</b> -
+												<a href=" https://github.com/angular/angular-cli">https://github.com/angular/angular-cli</a>
+											</p>
+											<p>
+												<pre>
+													<code class="hljs" data-trim contenteditable>ng new FOO</code>
+												</pre>
+											</p>
+											<p>
+												<b>React Command Line</b>
+												<a href="https://github.com/facebookincubator/create-react-app">
+												https://github.com/facebookincubator/create-react-app</a>
+											</p>
+												<p>
+													<pre>
+														<code class="hljs" data-trim contenteditable>create-react-app FOO</code>
+													</pre>
+												</p>
+											</p>
+									</section>
+                        <!-- Slide on React -->
+                        <section>
+                            <h2>Why Upgrade</h2>
+                            <p class="fragment">Mobile First</p>
+                            <p class="fragment">Standards focused​</p>
+                            <p class="fragment">Performance (Virtual DOM!)</p>
+                            <p class="fragment">Web Components</p>
+                        </section>
 
-						First deployed to drive FaceBooks's News feed
-					</section>
-					<section data-markdown>
-						## May 2013 ##
-						React [Open Sourced](https://github.com/facebook/react) at React Conf.
+								<!-- Slide on Comparing -->
+                <section >
+                    <h2>Not the Same</h2>
+                    <h4>Angular is a framework. React is a library</h4>
+                    <img src="./images/apple-orange.jpg" alt="Apples are not oranges"/>
+                </section>
 
-					</section>
-					<section >
-						<h2>Sept 2014</h2>
-						<p>AngularJS 2.0 <a href="https://github.com/facebook/react">announced</a> at NG-Europe</p>
-						<img height="400px" src="./images/angularTombstone.jpg" alt="AngularJS Tombstone">
-						<p>Begin the freak out</p>
-					</section>
-					<section >
-						<h2>June 2015</h2>
-						<p>ECMAScript 2015 (ES6) is launched</p>
-						<p>(ECMAScript 2016 (ES7) just came out this June)</p>
+								<!-- Code -->
+                <section >
+                    <h2>Periodic Table App</h2>
+										<p>Angular Version</p>
+                    <p>React Version</p>
+                </section>
 
-					</section>
+								<!-- Code -->
+                <section >
+                    <h2>Components</h2>
+										<p>React and Angular based on components</p>
+                    <p>Angular Gateway to HTML components</p>
+                </section>
 
-					<section>
-						<h2>Why History?</h2>
-						<p>Things are changing MUCH quicker than before!</p>
-						<br>
-						<a href="#/3">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+								<!-- Code -->
+                <section >
+                    <h2>Angular Component</h2>
+										<pre><code class="hljs" data-trim contenteditable>
+		import { Component } from 'angular2/core';​
+		@Component({​
+		    selector: 'foo-Div',​
+		    templateUrl: 'app/foo.html',​
+		    styleUrls: [ 'app/foo.css' ]​
+		})​
+		​
+		export class Foo {​
+		    public message = 'Foo!';​
+		}
+										</code></pre>
+								</section>
+
+								<!-- Code for React Component -->
+                <section >
+                    <h2>React Component</h2>
+										<pre><code class="hljs" data-trim contenteditable>
+import React from 'react';​
+export default class Foo extends React.Component {​
+	constructor(props) {​
+		super(props);​
+		this.state = { message: 'foo!' };​
+	}​
+	render() {​
+		return (​
+			<div>​
+				<p>{this.state.message}</p>​
+			</div>​
+			);
+		}
+	}​
+									</code></pre>
 
 
-				<section>
-					<h2>AngularJS Level Set</h2>
-					<p class="fragment">From the fine folks at Google​</p>
-					<p class="fragment">AngularJS 1.x – Google JavaScript library for development​</p>
-					<p class="fragment">AngularJS 2.x – Called Angular​</p>
-					<p class="fragment">Angular is a Framework​</p>
-					<p class="fragment">Angular is opinionated​</p>
-					<p class="fragment">Angular has code in your markup​</p>
-					<p class="fragment">Angular is HTML centric</p>
-				</section>
+
+
+
+					</div>
 			</div>
-		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+                <script src="lib/js/head.min.js"></script>
+                <script src="js/reveal.js"></script>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
-</html>
+                <script>
+                    // More info https://github.com/hakimel/reveal.js#configuration
+                    Reveal.initialize({
+                        history: true,
+
+                        // More info https://github.com/hakimel/reveal.js#dependencies
+                        dependencies: [
+                            {
+                                src: 'plugin/markdown/marked.js'
+                            }, {
+                                src: 'plugin/markdown/markdown.js'
+                            }, {
+                                src: 'plugin/notes/notes.js',
+                                async: true
+                            }, {
+                                src: 'plugin/highlight/highlight.js',
+                                async: true,
+                                callback: function() {
+                                    hljs.initHighlightingOnLoad();
+                                }
+                            }
+                        ]
+                    });
+                </script>
+            </body>
+        </html>
