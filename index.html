@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>Angular vs React - NewDug Sept 2016</title>
 
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/theme/blood.css">
 
         <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -328,8 +328,10 @@ export default class Foo extends React.Component {​
 <section>
     <h2>Feelings</h2>
     <section>
-      <blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr"><a href="https://twitter.com/jptacek">@jptacek</a> boooooo angular boooooooooooo</p>&mdash; $30,000 Logout CSRF (@tqbf) <a href="https://twitter.com/tqbf/status/771175400529534976">September 1, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="pt" dir="ltr">
+        <a href="https://twitter.com/jptacek">@jptacek</a> boooooo angular boooooooooooo</p>&mdash; $30,000 Logout CSRF (@tqbf) <a href="https://twitter.com/tqbf/status/771175400529534976">September 1, 2016</a>
+      </blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
     <section>
         <p>Angular is a framework = bigger</p>
@@ -342,7 +344,7 @@ export default class Foo extends React.Component {​
     <section>
         <p>React is a library, best of breed</p>
         <ul>
-            <li>Sweet Christmas JavaScript churn is killing me​
+            <li>Sweet Christmas! JavaScript churn is killing me​
         </ul>
     </section>
 
@@ -426,7 +428,8 @@ export default class Foo extends React.Component {​
 // More info https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
     history: true,
-
+      transition: Reveal.getQueryHash().transition || 'convex',
+      theme: Reveal.getQueryHash().theme || 'blood',
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
         {
